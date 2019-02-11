@@ -4,7 +4,13 @@
   "description": "FizzBuzz with TDD",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/**/*.spec.js --require babel-register --watch"
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "exclude": ["tests/**"]
   },
   "author": "Welinton Subtil <welinton.ti@gmail.com>",
   "license": "ISC",
@@ -12,6 +18,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0"
   }
 }
