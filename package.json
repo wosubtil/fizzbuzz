@@ -1,0 +1,17 @@
+{
+  "name": "fizz-buzz",
+  "version": "1.0.0",
+  "description": "FizzBuzz with TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.spec.js --require babel-register --watch"
+  },
+  "author": "Welinton Subtil <welinton.ti@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
