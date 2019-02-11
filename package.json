@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.spec.js --require babel-register",
+    "prepush": "npm run test:coverage",
     "test:tdd": "mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
     "reporter": ["text", "html"],
     "exclude": ["tests/**"]
   },
